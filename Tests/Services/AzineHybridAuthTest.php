@@ -29,9 +29,9 @@ class AzineHybridAuthTest extends TestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $tokenStorage->expects($this->any())
-            ->method('getToken')
-            ->will($this->returnValue($token));
+       // $tokenStorage->expects($this->any())
+       //     ->method('getToken')
+      //      ->will($this->returnValue($token));
 
         $config = array('endpoint_route' => 'route', 'providers' => 'providers', 'debug_mode' => 'debug_mode', 'debug_file' => 'debug_file');
         $this->azineHybridAuth = new AzineHybridAuth($router, $tokenStorage, $entityManager,
